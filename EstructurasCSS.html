@@ -50,20 +50,22 @@
      @media screen and (min-width: 600px) {
     /* aqui inician los estilos de tablet*/
         nav{
-            float: left;
+            display: inline-block;
             width: 20%;
             height: 600px;
+            vertical-align: top;
         }
-    }
-     /* aqui terminan los estilos de tablet*/ 
+        main > section {
+        display: inline-block;
+        width: 74%;
+        vertical-align: top;
+        }
     header, .seccion, footer{ 
             height: 200px;
         }
-        footer {
-            clear:left;
-
-        }
-
+       
+        /* aqui terminan los estilos de tablet*/ 
+    }
 
         @media screen and (min-width: 1024px) {
     /* aqui inician los estilos de tdesktop*/
@@ -71,8 +73,7 @@
             background: #273d09;
             
         }
-          
-
+        
         header{
             background: #34032b;
     
@@ -88,6 +89,9 @@
         
             background: #137b18; }
    
+            main > section {
+        width: 76.4%;
+        }
     }
      /* aqui terminan los estilos de desktop*/ 
     header, .seccion, footer{ 
