@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             color: #ffffff;
-            background: #ff0b0b;
+            background: #ffffff;
             text-align: center;
             font-size: 16px;
             box-sizing: border-box;
@@ -20,40 +20,83 @@
         
         nav{
             background: #1dc473;
-            padding: 1em;
-            position: absolute;
-            top: 0;
-            float: left;
-            left: 0;
-            width: 20;
-            height: 600px;
+            
         }
           
-        header, section, footer{ 
-            height: 200px;
-        }
 
         header{
             background: #ff00d0;
-            padding: 1em;
+    
         }
         
-       section{
+        .seccion{
             background: #baff39;
-            padding: 1em;
+
        }
 
        
         footer {
+        
             background: #0025f5;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
+
         }
     a{ color:#ffffff }
     li { text-align: left;}
+
+    header, .seccion, footer, nav{ 
+            padding: 1em; 
+        }
+
+     @media screen and (min-width: 600px) {
+    /* aqui inician los estilos de tablet*/
+        nav{
+            float: left;
+            width: 20%;
+            height: 600px;
+        }
+    }
+     /* aqui terminan los estilos de tablet*/ 
+    header, .seccion, footer{ 
+            height: 200px;
+        }
+        footer {
+            clear:left;
+
+        }
+
+
+        @media screen and (min-width: 1024px) {
+    /* aqui inician los estilos de tdesktop*/
+    nav{
+            background: #273d09;
+            
+        }
+          
+
+        header{
+            background: #34032b;
+    
+        }
+        
+        .seccion{
+            background: #e2bc23;
+
+       }
+
+       
+        footer {
+        
+            background: #137b18; }
+   
+    }
+     /* aqui terminan los estilos de desktop*/ 
+    header, .seccion, footer{ 
+            height: 200px;
+        }
+        footer {
+            clear:left;
+            
+        }
     </style>
 </head>
 <body>
@@ -70,16 +113,19 @@
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
-  
-        <section>
+
+  <section>
+        <section class="seccion">
             <h2>Sección 1</h2>
             <p>Contenido de la primera sección.</p>
         </section>
 
-        <section>
+        <section class="seccion">
             <h2>Sección 2</h2>
             <p>Contenido de la segunda sección.</p>
         </section>
+  </section>
+        
     </main> 
 
     <footer>
