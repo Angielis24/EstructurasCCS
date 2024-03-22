@@ -52,9 +52,20 @@
      @media screen and (min-width: 600px) {
     /* aqui inician los estilos de tablet*/
        
-
-    header, .seccion, footer{ 
-            height: 200px;
+        main{
+                display: grid;
+                grid-template-columns: 20% 80% ;
+                grid-template-rows: 200px 200px ;
+            }
+        nav{
+            grid-row-start: 1;
+            grid-row-end: 3; 
+        }
+        header, .seccion,footer{
+          height: 200px;
+        }
+        .seccion{
+            height: 168px;
         }
        
         /* aqui terminan los estilos de tablet*/ 
@@ -85,50 +96,47 @@
           
     }
      /* aqui terminan los estilos de desktop*/ 
-    header, .seccion, footer{ 
-            height: 200px;
-        }
-        footer {
-            clear:left;
-            
-        }
+    
+
     </style>
 </head>
 <body>
-    <div class="row">
-    <header class="col-xs-12">
-        <h1 class="box">Encabezado de la página</h1>
-    </header>
-    </div>  
 
-   <main class="row">        
-        <nav class="col-xs-12 col-sm-3 col-lg-2">
-            <ul clase="box">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
+    <!-- Encabezado (Header) -->
+    <header>
+        <h1>Prioridad al peatón</h1>
+        <p>Ciudades para las personas y no mounstros de acero</p>
+    </header>
+
+    <!-- Barra de Navegacion -->
+    <main>
+        <nav>
+            <ul>
+                <li><a href="#">Transporte público</a></li>
+                <li><a href="#">Empleos bien pagados</a></li>
+                <li><a href="#">Precios accesibles</a></li>
+                <li><a href="#">El obrero primero</a></li>
             </ul>
         </nav>
 
-        <section class="col-xs-12 col-sm-9 col-lg-10">
-                <section class="seccion box">
-                    <h2>Sección 1</h2>
-                    <p>Contenido de la primera sección.</p>
-                </section>
+        <section>
+            <!-- Primera Seccion -->
+            <section class="seccion">
+                <h2>Seccion 1</h2>
+                <p>Contenido de la primera seccion.</p>
+            </section>
 
-                <section class="seccion box">
-                    <h2>Sección 2</h2>
-                    <p>Contenido de la segunda sección.</p>
-                </section>
+            <!-- Segunda Seccion -->
+            <section class="seccion">
+                <h2>Seccion 2</h2>
+                <p>Contenido de la segunda seccion.</p>
+            </section>
         </section>
-        
-    </main> 
-
-    <div class="row">
-        <footer class="col-xs-12">
-        <p class="box">Pie de página - Derechos reservados &copy; 2024</p>
-        </footer>
-    </div>
+    </main>
+    <!-- Pie de Pagina (Footer) -->
+    <footer>
+        <p>&copy; 2024 Tu Pagina. Todos los derechos reservados.</p>
+        <!-- Puedes agregar mas contenido o enlaces aqui -->
+    </footer>
 </body>
 </html>
